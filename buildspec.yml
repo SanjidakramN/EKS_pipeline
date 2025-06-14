@@ -8,7 +8,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - ACCOUNT_ID=448049821673
       - REGION=us-east-1
-      - REPO_NAME=ekcpipe
+      - REPO_NAME=newekc-repo
       - IMAGE_TAG=v1.$CODEBUILD_BUILD_NUMBER
       - aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com
 
